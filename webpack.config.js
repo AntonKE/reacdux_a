@@ -1,6 +1,26 @@
+var webpack = require('webpack');
+var path = require('path');
+
+var config = {
+    entry: './src/main.js',
+    output: {
+        path: path.resolve(__dirname, '../public'),
+        filename: 'app.js',
+    }
+};
+
+module.exports = config;
+
+/*
 module.exports = {
-  /*entry: './src/app.js',*/
-  entry: './index'
+  devServer: {
+      inline: true,
+      contentBase: './src',
+      port: 3000
+  },
+  devtool: 'source-map',
+  entry: './src/app.js',
+  entry: './index',
   output: {
     path: __dirname,
     filename: 'bundle.js'
@@ -17,6 +37,8 @@ module.exports = {
     ]
   }
 };
+*/
+
 
 /*
 'use strict';
